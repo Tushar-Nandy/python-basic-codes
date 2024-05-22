@@ -4,7 +4,7 @@ shift=int(input("Enter the encoding (shifting) number: "))
 letter=input("Enter the message: ").lower()
 encodeLetter=''
 for word in letter:
-    encodeLetter+=alphabet[alphabet.index(word)+shift]
+    encodeLetter+=alphabet[(alphabet.index(word)+shift)%n]
 
 print(f"The encoded message is {encodeLetter}")
 
