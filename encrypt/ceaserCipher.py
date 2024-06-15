@@ -2,7 +2,7 @@ from asciiart import logo
 print(logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm','n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 n=len(alphabet)
-punctuation=[',','.',' ','!','$','"',"'","(",')','1','2','3','4','5','6','7','8','9','0','-','_','/','@']
+punctuation=[',','.',' ','!','$','"',"'","(",')','1','2','3','4','5','6','7','8','9','0','-','_','/','@','?']
 def caser(shift,letter,opr):
     text=''
     if opr=="decrypt":
