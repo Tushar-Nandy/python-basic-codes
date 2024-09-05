@@ -15,7 +15,7 @@ game_tick=0
 
 cars=[]
 player=Player()
-
+score=Scoreboard()
 while game_is_on:
     if game_tick%15==0:
         for _ in range(rd.randint(0,5)):
@@ -27,5 +27,13 @@ while game_is_on:
     game_tick+=1
     for car in cars:
         car.move_car()
+        if car.distance(player) <20:
+            game_is_on=False
+            score.game_over()
+        if player.finish_line():
+            car.new_level()
+            score.level_up()
+            
+
 
 screen.exitonclick()

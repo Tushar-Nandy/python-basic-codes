@@ -20,3 +20,6 @@ class CarManager(Turtle):
     def reach_end(self):
         if self.xcor<=-290:
             return True
+    def new_level(self):
+        self.move_speed+=MOVE_INCREMENT
+        cars.clear()
