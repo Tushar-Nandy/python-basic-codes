@@ -34,12 +34,14 @@ while game_is_on:
         scoreboard.increase_score()
         snake.extend()
     if snake.touchWall():
-        scoreboard.game_over()
-        game_is_on=False
+        scoreboard.reset()
+        snake.reset()
+        #game_is_on=False
     for seg in snake.snake_body[1:]:
         if snake.snake_body[0].distance(seg) < 10:
-            game_is_on=False
-            scoreboard.game_over()
+            #game_is_on=False
+            scoreboard.reset()
+            snake.reset()
     
         
         
