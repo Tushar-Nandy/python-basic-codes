@@ -3,7 +3,7 @@ import pandas as pd
 data_csv=pd.read_csv("nato_phonetic_alphabet.csv")
 
 data_dict={row.letter : row.code for (index,row) in data_csv.iterrows()}
-#print(data_dict)
+print(data_dict)
 
 name=input("Enter a string: ")
 
