@@ -9,7 +9,7 @@ while is_on:
     name=input("Enter a string: ")
     try:
         name_list=[data_dict[char.upper()] for char in name ]
-    except:
+    except KeyError:
         print("Sorry, only letters in the alphabet please.")
     else:
         is_on=False
