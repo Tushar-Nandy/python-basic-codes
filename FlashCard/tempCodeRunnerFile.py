@@ -1,0 +1,1 @@
+my_image =PhotoImage(file="./images/card_front.png")
