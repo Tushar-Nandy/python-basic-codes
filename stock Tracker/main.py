@@ -12,13 +12,13 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 stock_params={
     'function':'TIME_SERIES_DAILY',
     'symbol':STOCK_NAME,
-    'apikey':'KKPAJBCE2A160X1C'
+    'apikey':'demo'
 }
 news_param={
     'q':COMPANY_NAME,
     'from':(Stock_yesterday),
     'sortBy':'publishedAt',
-    'apiKey':'9a2d75b7a5b2472a9ea5903dcc4f0a81'
+    'apiKey':''
 }
 r = requests.get(STOCK_ENDPOINT,params=stock_params).json()
 
@@ -88,3 +88,7 @@ Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?.
 Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and prominent investors are required to file by the SEC The 13F filings show the funds' and investors' portfolio positions as of March 31st, near the height of the coronavirus market crash.
 """
 
+
+
+# NNNEDNMDKEMIDNED DDKEND122KM231   MKMKNKM1WKEMKE  #KKLPSDMD2K123X1A#:  KKPAJBCE2A160X1C21234#
+#mek3m3 3krn3kr 3k4n34 2k3k4 3k4 k2 m3 2kn2k 4kn4 m4 123 1k24n 42kmkmk,9a2d75b7a5b2472a9ea5903dcc4f0a81 1133 21313131 311mk33r3 r3 rn3r 3 rr
