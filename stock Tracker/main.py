@@ -18,7 +18,7 @@ news_param={
     'q':COMPANY_NAME,
     'from':(Stock_yesterday),
     'sortBy':'publishedAt',
-    'apiKey':''
+    'apiKey':'demo'
 }
 r = requests.get(STOCK_ENDPOINT,params=stock_params).json()
 
