@@ -4,8 +4,8 @@ from datetime import date,timedelta
 STOCK_NAME = "AMGN"
 COMPANY_NAME = "Tesla Inc"
 TODAY = date.today()
-Stock_today = TODAY - timedelta(days=1)
-Stock_yesterday = TODAY - timedelta(days= 2)
+Stock_today = TODAY - timedelta(days=4)
+Stock_yesterday = TODAY - timedelta(days= 5)
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
@@ -31,6 +31,7 @@ except KeyError:
 artcles=[]
 def get_news():
     res = requests.get(NEWS_ENDPOINT,params=news_param).json()
+    #print(res)
     news = res['articles']
     print(type(news))
     for i in range(3):
@@ -52,12 +53,12 @@ before_yesterday_close = float(data[str(Stock_yesterday)]['4. close'])
 
 #TODO 3. - Find the positive difference between 1 and 2. e.g. 40 - 20 = -20, but the positive difference is 20. Hint: https://www.w3schools.com/python/ref_func_abs.asp
 price_difference = abs(yesterday_close - before_yesterday_close)
-print(price_difference)
+print(f'Price Difference: $ {price_difference}')
 #TODO 4. - Work out the percentage difference in price between closing price yesterday and closing price the day before yesterday.
 percentage = price_difference*100/yesterday_close
-print(percentage)
+print(f'Percentage Difference: {percentage}%')
 #TODO 5. - If TODO4 percentage is greater than 5 then print("Get News").
-if percentage >=5:
+if percentage >=0:
     get_news()
 
     ## STEP 2: https://newsapi.org/ 
@@ -90,5 +91,83 @@ Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and 
 
 
 
-# NNNEDNMDKEMIDNED DDKEND122KM231   MKMKNKM1WKEMKE  #KKLPSDMD2K123X1A#:  KKPAJBCE2A160X1C21234#
-#mek3m3 3krn3kr 3k4n34 2k3k4 3k4 k2 m3 2kn2k 4kn4 m4 123 1k24n 42kmkmk,9a2d75b7a5b2472a9ea5903dcc4f0a81 1133 21313131 311mk33r3 r3 rn3r 3 rr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# NNNEDNMDKEMIDNED DDKEND122KM231   MKMKNKM1WKEMKE  #KKLPSDMD2K123X1A#:  KKPAJBCE2A160X1C21234# KKLPSDMD2K123X1
+#mek3m3 3krn3kr 3k4n34 2k3k4 3k4 k2 m3 2kn2k 4kn4 m4 123 1k24n 42kmkmk,9a2d75b7a5b2472a9ea5903dcc4f0a81 1133 21313131 311mk33r3 r3 rn3r 3 rr 9a2d75b7a5b2472a9ea5903dcc4f0a81
